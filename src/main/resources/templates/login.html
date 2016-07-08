@@ -2,19 +2,47 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
-        <title>Login Page </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+        <title>Login page</title>
+        <link href="../static/css/bootstrap.css" th:href="@{css/bootstrap.css}" rel="stylesheet" media="screen"/>
+        <link href="../static/css/app.css" th:href="@{css/app.css}" rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
     </head>
+
     <body>
-        <div th:if="${param.error}">
-            Invalid username and password.
+        <div id="mainWrapper">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-form">
+                        <form th:action="@{/login}" method="post" class="form-horizontal">
+                            <div th:if="${param.error}">
+                                <div class="alert alert-danger">
+                                    <p>Invalid username and password.</p>
+                                </div>
+                            </div>
+                            <div th:if="${param.logout}">
+                                <div class="alert alert-success">
+                                    <p>You have been logged out successfully.</p>
+                                </div>
+                            </div>
+                            <div class="input-group input-sm">
+                                <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" />
+                            </div>
+                            <div class="input-group input-sm">
+                                <label class="input-group-addon" for="password"><i class="fa fa-lock"></i></label> 
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+                            </div>
+                                 
+                            <div class="form-actions">
+                                <input type="submit"
+                                    class="btn btn-block btn-primary btn-default" value="Log in"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div th:if="${param.logout}">
-            You have been logged out.
-        </div>
-        <form th:action="@{/login}" method="post">
-            <div><label> User Name : <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Sign In"/></div>
-        </form>
+ 
     </body>
 </html>
