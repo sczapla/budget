@@ -23,7 +23,7 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String index() {
-		return "index_old";
+		return "index";
 	}
 
 	@RequestMapping("/login")

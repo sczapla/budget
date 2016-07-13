@@ -6,18 +6,12 @@
 * License : https://GenesisUI.com/license.html
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4">
-        <meta name="author" content="Lukasz Holeczek">
-        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4">
-        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
-        <title>ROOT Admin - UI Admin Kit</title>
-        <!-- Main styles for this application -->
-        <link href="assets/css/style.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Index page</title>
+        <link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
     </head>
     <!-- BODY options, add following classes to body to change options
 		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
@@ -50,18 +44,16 @@
                 <ul class="nav navbar-nav pull-right hidden-md-down">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                            <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English"/>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-header text-xs-center">
                                 <strong>Choose language</strong>
                             </div>
                             <a class="dropdown-item" href="#">
-                                <img src="assets/img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                                <img src="assets/img/flags/Poland.png" class="img-flag" alt="Polish"/> Polish</a>
                             <a class="dropdown-item" href="#">
-                                <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
-                            <a class="dropdown-item" href="#">
-                                <img src="assets/img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                                <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English"/> English</a>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -75,7 +67,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             <span class="hidden-md-down">admin</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -106,7 +98,7 @@
         </header>
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar"/>
                 <div>
                     <strong>JOHN DOE</strong>
                 </div>
@@ -349,77 +341,77 @@
                                 <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-success"></span>
                                     </div>
                                     Anton Phunihel
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-success"></span>
                                     </div>
                                     Alphonse Ivo
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-success"></span>
                                     </div>
                                     Thancmar Theoph
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-warning"></span>
                                     </div>
                                     Walerian Khwaja
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-warning"></span>
                                     </div>
                                     Clemens Janko
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-warning"></span>
                                     </div>
                                     Chidubem Gottlob
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-danger"></span>
                                     </div>
                                     Hristofor Sergio
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-danger"></span>
                                     </div>
                                     Tadhg Griogair
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-danger"></span>
                                     </div>
                                     Pollux Beaumont
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-danger"></span>
                                     </div>
                                     Adam Alister
                                 </a>
                                 <a class="dropdown-item p-l-0" href="#">
                                     <div class="avatar avatar-sm">
-                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                         <span class="avatar-status label-danger"></span>
                                     </div>
                                     Carlito Roffe
@@ -614,13 +606,13 @@
                                     <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
                                         <div class="btn-group" data-toggle="buttons" aria-label="First group">
                                             <label class="btn btn-sm btn-secondary-outline">
-                                                <input type="radio" name="options" id="option1"> Day
+                                                <input type="radio" name="options" id="option1"/> Day
                                             </label>
                                             <label class="btn btn-sm btn-secondary-outline active">
-                                                <input type="radio" name="options" id="option2" checked> Month
+                                                <input type="radio" name="options" id="option2" /> Month
                                             </label>
                                             <label class="btn btn-sm btn-secondary-outline">
-                                                <input type="radio" name="options" id="option3"> Year
+                                                <input type="radio" name="options" id="option3"/> Year
                                             </label>
                                         </div>
                                         <div class="btn-group hidden-sm-down" role="group" aria-label="Second group">
@@ -760,19 +752,19 @@
                                             <fieldset class="form-group pull-right">
                                                 <div class="input-group input-group-sm pull-right" style="width:230px;">
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                    <input name="daterange" class="form-control date-picker" type="text">
+                                                    <input name="daterange" class="form-control date-picker" type="text"/>
                                                 </div>
                                             </fieldset>
                                         </div>
                                     </div>
-                                    <hr class="m-a-0">
+                                    <hr class="m-a-0"/>
                                     <div class="row">
                                         <div class="col-sm-12 col-lg-4">
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="callout callout-info">
                                                         <small class="text-muted">New Clients</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">9,123</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-1" width="100" height="30"></canvas>
@@ -783,7 +775,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="callout callout-danger">
                                                         <small class="text-muted">Recuring Clients</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">22,643</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-2" width="100" height="30"></canvas>
@@ -793,7 +785,7 @@
                                                 <!--/.col-->
                                             </div>
                                             <!--/.row-->
-                                            <hr class="m-t-0">
+                                            <hr class="m-t-0"/>
                                             <ul class="horizontal-bars">
                                                 <li>
                                                     <div class="title">
@@ -872,7 +864,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="callout callout-warning">
                                                         <small class="text-muted">Pageviews</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">78,623</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-3" width="100" height="30"></canvas>
@@ -883,7 +875,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="callout callout-success">
                                                         <small class="text-muted">Organic</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">49,123</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-4" width="100" height="30"></canvas>
@@ -893,7 +885,7 @@
                                                 <!--/.col-->
                                             </div>
                                             <!--/.row-->
-                                            <hr class="m-t-0">
+                                            <hr class="m-t-0"/>
                                             <ul class="horizontal-bars type-2">
                                                 <li>
                                                     <i class="icon-user"></i>
@@ -963,7 +955,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="callout">
                                                         <small class="text-muted">CTR</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">23%</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-5" width="100" height="30"></canvas>
@@ -974,7 +966,7 @@
                                                 <div class="col-sm-6">
                                                     <div class="callout callout-primary">
                                                         <small class="text-muted">Bounce Rate</small>
-                                                        <br>
+                                                        <br/>
                                                         <strong class="h4">5%</strong>
                                                         <div class="chart-wrapper">
                                                             <canvas id="sparkline-chart-6" width="100" height="30"></canvas>
@@ -984,7 +976,7 @@
                                                 <!--/.col-->
                                             </div>
                                             <!--/.row-->
-                                            <hr class="m-t-0">
+                                            <hr class="m-t-0"/>
                                             <ul class="icons-list">
                                                 <li>
                                                     <i class="icon-screen-desktop bg-primary"></i>
@@ -1092,7 +1084,7 @@
                                         <!--/.col-->
                                     </div>
                                     <!--/.row-->
-                                    <br>
+                                    <br/>
                                     <table class="table table-hover table-outline m-b-0 hidden-sm-down">
                                         <thead class="thead-default">
                                             <tr>
@@ -1110,7 +1102,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-success"></span>
                                                     </div>
                                                 </td>
@@ -1121,7 +1113,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/USA.png" alt="USA" style="height:24px;">
+                                                    <img src="assets/img/flags/USA.png" alt="USA" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1154,7 +1146,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-danger"></span>
                                                     </div>
                                                 </td>
@@ -1165,7 +1157,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/Brazil.png" alt="Brazil" style="height:24px;">
+                                                    <img src="assets/img/flags/Brazil.png" alt="Brazil" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1198,7 +1190,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-warning"></span>
                                                     </div>
                                                 </td>
@@ -1208,7 +1200,7 @@
                                                         <span>New</span> | Registered: Jan 1, 2015</div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/India.png" alt="India" style="height:24px;">
+                                                    <img src="assets/img/flags/India.png" alt="India" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1241,7 +1233,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-default"></span>
                                                     </div>
                                                 </td>
@@ -1252,7 +1244,7 @@
                                                         | Registered: Jan 1, 2015</div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/France.png" alt="France" style="height:24px;">
+                                                    <img src="assets/img/flags/France.png" alt="France" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1286,7 +1278,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-success"></span>
                                                     </div>
                                                 </td>
@@ -1297,7 +1289,7 @@
                                                         | Registered: Jan 1, 2015</div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/Spain.png" alt="Spain" style="height:24px;">
+                                                    <img src="assets/img/flags/Spain.png" alt="Spain" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1331,7 +1323,7 @@
                                             <tr>
                                                 <td class="text-xs-center">
                                                     <div class="avatar">
-                                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                                         <span class="avatar-status label-danger"></span>
                                                     </div>
                                                 </td>
@@ -1342,7 +1334,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="text-xs-center">
-                                                    <img src="assets/img/flags/Poland.png" alt="Poland" style="height:24px;">
+                                                    <img src="assets/img/flags/Poland.png" alt="Poland" style="height:24px;"/>
                                                 </td>
                                                 <td>
                                                     <div class="clearfix">
@@ -1403,10 +1395,10 @@
                     <div class="callout m-a-0 p-y-h text-muted text-xs-center bg-faded text-uppercase">
                         <small><b>Today</b></small>
                     </div>
-                    <hr class="transparent m-x-1 m-y-0">
+                    <hr class="transparent m-x-1 m-y-0"/>
                     <div class="callout callout-warning m-a-0 p-y-1">
                         <div class="avatar pull-xs-right">
-                            <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                         </div>
                         <div>Meeting with
                             <strong>Lucas</strong>
@@ -1414,10 +1406,10 @@
                         <small class="text-muted m-r-1"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
                         <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA </small>
                     </div>
-                    <hr class="m-x-1 m-y-0">
+                    <hr class="m-x-1 m-y-0"/>
                     <div class="callout callout-info m-a-0 p-y-1">
                         <div class="avatar pull-xs-right">
-                            <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                            <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                         </div>
                         <div>Skype with
                             <strong>Megan</strong>
@@ -1425,11 +1417,11 @@
                         <small class="text-muted m-r-1"><i class="icon-calendar"></i>&nbsp; 4 - 5pm</small>
                         <small class="text-muted"><i class="icon-social-skype"></i>&nbsp; On-line </small>
                     </div>
-                    <hr class="transparent m-x-1 m-y-0">
+                    <hr class="transparent m-x-1 m-y-0"/>
                     <div class="callout m-a-0 p-y-h text-muted text-xs-center bg-faded text-uppercase">
                         <small><b>Tomorrow</b></small>
                     </div>
-                    <hr class="transparent m-x-1 m-y-0">
+                    <hr class="transparent m-x-1 m-y-0"/>
                     <div class="callout callout-danger m-a-0 p-y-1">
                         <div>New UI Project -
                             <strong>deadline</strong>
@@ -1438,30 +1430,30 @@
                         <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
                         <div class="avatars-stack m-t-h">
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                         </div>
                     </div>
-                    <hr class="m-x-1 m-y-0">
+                    <hr class="m-x-1 m-y-0"/>
                     <div class="callout callout-success m-a-0 p-y-1">
                         <div>
                             <strong>#10 Startups.Garden</strong> Meetup</div>
                         <small class="text-muted m-r-1"><i class="icon-calendar"></i>&nbsp; 1 - 3pm</small>
                         <small class="text-muted"><i class="icon-location-pin"></i>&nbsp; Palo Alto, CA </small>
                     </div>
-                    <hr class="m-x-1 m-y-0">
+                    <hr class="m-x-1 m-y-0"/>
                     <div class="callout callout-primary m-a-0 p-y-1">
                         <div>
                             <strong>Team meeting</strong>
@@ -1470,35 +1462,35 @@
                         <small class="text-muted"><i class="icon-home"></i>&nbsp; creativeLabs HQ </small>
                         <div class="avatars-stack m-t-h">
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                             <div class="avatar avatar-xs">
-                                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                             </div>
                         </div>
                     </div>
-                    <hr class="m-x-1 m-y-0">
+                    <hr class="m-x-1 m-y-0"/>
                 </div>
                 <div class="tab-pane p-a-1" id="messages" role="tabpanel">
                     <div class="message">
                         <div class="p-y-1 p-b-3 m-r-1 pull-left">
                             <div class="avatar">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                 <span class="avatar-status label-success"></span>
                             </div>
                         </div>
@@ -1509,11 +1501,11 @@
                         <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                     </div>
-                    <hr>
+                    <hr/>
                     <div class="message">
                         <div class="p-y-1 p-b-3 m-r-1 pull-left">
                             <div class="avatar">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                 <span class="avatar-status label-success"></span>
                             </div>
                         </div>
@@ -1524,11 +1516,11 @@
                         <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                     </div>
-                    <hr>
+                    <hr/>
                     <div class="message">
                         <div class="p-y-1 p-b-3 m-r-1 pull-left">
                             <div class="avatar">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                 <span class="avatar-status label-success"></span>
                             </div>
                         </div>
@@ -1539,11 +1531,11 @@
                         <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                     </div>
-                    <hr>
+                    <hr/>
                     <div class="message">
                         <div class="p-y-1 p-b-3 m-r-1 pull-left">
                             <div class="avatar">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                 <span class="avatar-status label-success"></span>
                             </div>
                         </div>
@@ -1554,11 +1546,11 @@
                         <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
                         <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
                     </div>
-                    <hr>
+                    <hr/>
                     <div class="message">
                         <div class="p-y-1 p-b-3 m-r-1 pull-left">
                             <div class="avatar">
-                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com"/>
                                 <span class="avatar-status label-success"></span>
                             </div>
                         </div>
@@ -1576,7 +1568,7 @@
                         <div class="clearfix m-t-2">
                             <small><b>Option 1</b></small>
                             <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
-                                <input type="checkbox" class="switch-input" checked>
+                                <input type="checkbox" class="switch-input"/>
                                 <span class="switch-label" data-on="On" data-off="Off"></span>
                                 <span class="switch-handle"></span>
                             </label>
@@ -1589,7 +1581,7 @@
                         <div class="clearfix m-t-1">
                             <small><b>Option 2</b></small>
                             <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
-                                <input type="checkbox" class="switch-input">
+                                <input type="checkbox" class="switch-input"/>
                                 <span class="switch-label" data-on="On" data-off="Off"></span>
                                 <span class="switch-handle"></span>
                             </label>
@@ -1602,7 +1594,7 @@
                         <div class="clearfix m-t-1">
                             <small><b>Option 3</b></small>
                             <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
-                                <input type="checkbox" class="switch-input">
+                                <input type="checkbox" class="switch-input"/>
                                 <span class="switch-label" data-on="On" data-off="Off"></span>
                                 <span class="switch-handle"></span>
                             </label>
@@ -1612,13 +1604,13 @@
                         <div class="clearfix m-t-1">
                             <small><b>Option 4</b></small>
                             <label class="switch switch-text switch-pill switch-success switch-sm pull-right">
-                                <input type="checkbox" class="switch-input" checked>
+                                <input type="checkbox" class="switch-input"/>
                                 <span class="switch-label" data-on="On" data-off="Off"></span>
                                 <span class="switch-handle"></span>
                             </label>
                         </div>
                     </div>
-                    <hr>
+                    <hr/>
                     <h6>System Utilization</h6>
                     <div class="text-uppercase m-b-q m-t-2">
                         <small><b>CPU Usage</b></small>
@@ -1652,22 +1644,22 @@
             </span>
         </footer>
         <!-- Bootstrap and necessary plugins -->
-        <script src="assets/js/libs/jquery.min.js"></script>
-        <script src="assets/js/libs/tether.min.js"></script>
-        <script src="assets/js/libs/bootstrap.min.js"></script>
-        <script src="assets/js/libs/pace.min.js"></script>
+        <script src="../static/js/libs/jquery.min.js" th:src="@{js/libs/jquery.min.js}"></script>
+        <script src="../static/js/libs/tether.min.js" th:src="@{js/libs/tether.min.js}"></script>
+        <script src="../static/js/libs/bootstrap.min.js" th:src="@{js/libs/bootstrap.min.js}"></script>
+        <script src="../static/js/libs/pace.min.js" th:src="@{js/libs/pace.min.js}"></script>
         <!-- Plugins and scripts required by all views -->
-        <script src="assets/js/libs/Chart.min.js"></script>
-        <script src="assets/js/views/shared.js"></script>
+        <script src="../static/js/libs/Chart.min.js" th:src="@{js/libs/Chart.min.js}"></script>
+        <script src="../static/js/views/shared.js" th:src="@{js/libs/shared.js}"></script>
         <!-- GenesisUI main scripts -->
-        <script src="assets/js/app.js"></script>
+        <script src="../static/js/app.js" th:src="@{js/libs/app.js}"></script>
         <!-- Plugins and scripts required by this views -->
-        <script src="assets/js/libs/toastr.min.js"></script>
-        <script src="assets/js/libs/gauge.min.js"></script>
-        <script src="assets/js/libs/moment.min.js"></script>
-        <script src="assets/js/libs/daterangepicker.min.js"></script>
+        <script src="../static/js/libs/toastr.min.js" th:src="@{js/libs/toastr.min.js}"></script>
+        <script src="../static/js/libs/gauge.min.js" th:src="@{js/libs/gauge.min.js}"></script>
+        <script src="../static/js/libs/moment.min.js" th:src="@{js/libs/moment.min.js}"></script>
+        <script src="../static/js/libs/daterangepicker.min.js" th:src="@{js/libs/daterangepicker.min.js}"></script>
         <!-- Custom scripts required by this view -->
-        <script src="assets/js/views/main.js"></script>
+        <script src="../static/js/views/main.js" th:src="@{js/libs/main.js}"></script>
         
         
     </body>
