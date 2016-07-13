@@ -22,7 +22,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests().anyRequest().authenticated();
+		http.authorizeRequests().antMatchers("/register").permitAll().anyRequest().authenticated();
 		http.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
 
 	}
@@ -38,9 +38,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	}
 
 	@Bean
+	public BCryptPasswordEncoder getBCryptPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
+	@Bean
 	public AuthenticationProvider getAuthenticationProvider() {
 		DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-		authProvider.setPasswordEncoder(new BCryptPasswordEncoder());
+		authProvider.setPasswordEncoder(getBCryptPasswordEncoder());
 		authProvider.setUserDetailsService(authUserDetailsService);
 		return authProvider;
 	}

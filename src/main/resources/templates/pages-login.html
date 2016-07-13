@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Login page</title>
+        <link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet" media="screen"/>
+    </head>
+    
+    <body class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="card-group vamiddle">
+                        <div class="card  p-a-2">
+                            <div class="card-block">
+                            <form th:action="@{/login}" method="post">
+                                <h1>Login</h1>
+                                <p class="text-muted">Sign In to your account</p>
+								<div th:if="${param.error}">
+									<div class="alert alert-danger">
+										<p>Invalid username and password.</p>
+									</div>
+								</div>
+								<div th:if="${param.logout}">
+									<div class="alert alert-success">
+										<p>You have been logged out successfully.</p>
+									</div>
+								</div>
+								<div class="input-group m-b-1">
+                                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                    <input type="text" class="form-control" name="username" th:placeholder="#{budget.login.username.placeholder}"/>
+                                </div>
+                                <div class="input-group m-b-2">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                                    <input type="password" class="form-control" name="password" th:placeholder="#{budget.login.password.placeholder}"/>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input type="submit" class="btn btn-primary p-x-2" th:value="#{budget.login.name}"/>
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                        <div class="card card-inverse card-primary p-y-3" style="width:44%">
+                            <div class="card-block text-xs-center">
+                                <div>
+                                    <h2>Sign up</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <a class="btn btn-primary active m-t-1" th:href="@{/register}">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="../static/js/libs/jquery.min.js" th:src="@{js/libs/jquery.min.js}"></script>
+        <script src="../static/js/libs/tether.min.js" th:src="@{js/libs/tether.min.js}"></script>
+        <script src="../static/js/libs/bootstrap.min.js" th:src="@{js/libs/bootstrap.min.js}"></script>
+        <script>
+        function verticalAlignMiddle()
+        {
+            var bodyHeight = $(window).height();
+            var formHeight = $('.vamiddle').height();
+            var marginTop = (bodyHeight / 2) - (formHeight / 2);
+            if (marginTop > 0)
+            {
+                $('.vamiddle').css('margin-top', marginTop);
+            }
+        }
+        $(document).ready(function()
+        {
+            verticalAlignMiddle();
+        });
+        $(window).bind('resize', verticalAlignMiddle);
+        </script>
+       
+    </body>
+</html>

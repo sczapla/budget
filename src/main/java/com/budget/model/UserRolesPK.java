@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import com.budget.repositories.enums.UserRole;
 
 @Embeddable
 public class UserRolesPK implements Serializable {
@@ -13,7 +17,8 @@ public class UserRolesPK implements Serializable {
 	@Column
 	private String userName;
 	@Column
-	private String role;
+	@Enumerated(EnumType.STRING)
+	private UserRole role;
 
 	public String getUserName() {
 		return userName;
@@ -23,11 +28,11 @@ public class UserRolesPK implements Serializable {
 		this.userName = userName;
 	}
 
-	public String getRole() {
+	public UserRole getRole() {
 		return role;
 	}
 
-	public void setRole(String role) {
+	public void setRole(UserRole role) {
 		this.role = role;
 	}
 

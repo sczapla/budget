@@ -9,6 +9,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.Version;
 
 @Entity
@@ -19,6 +20,10 @@ public class User {
 	private String userName;
 	@Column
 	private String password;
+	@Transient
+	private String repeatPassword;
+	@Column
+	private String email;
 	@Column
 	private Boolean enabled;
 	@Version
@@ -64,6 +69,22 @@ public class User {
 
 	public void setUserRoles(List<UserRoles> userRoles) {
 		this.userRoles = userRoles;
+	}
+
+	public String getRepeatPassword() {
+		return repeatPassword;
+	}
+
+	public void setRepeatPassword(String repeatPassword) {
+		this.repeatPassword = repeatPassword;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }

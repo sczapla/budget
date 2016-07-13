@@ -27,16 +27,15 @@
                             </div>
                             <div class="input-group input-sm">
                                 <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" />
+                                <input type="text" class="form-control" id="username" name="username" th:placeholder="#{budget.login.username.placeholder}" />
                             </div>
                             <div class="input-group input-sm">
                                 <label class="input-group-addon" for="password"><i class="fa fa-lock"></i></label> 
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+                                <input type="password" class="form-control" id="password" name="password" th:placeholder="#{budget.login.password.placeholder}"/>
                             </div>
                                  
                             <div class="form-actions">
-                                <input type="submit"
-                                    class="btn btn-block btn-primary btn-default" value="Log in"/>
+                                <input type="submit" class="btn btn-block btn-primary btn-default" th:value="#{budget.login.name}"/>
                             </div>
                         </form>
                     </div>
